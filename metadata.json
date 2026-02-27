@@ -1,0 +1,5 @@
+{
+  "name": "Prime Property Market",
+  "description": "A modern, responsive real estate platform for buying and selling houses, land, apartments, and commercial buildings.",
+  "requestFramePermissions": ["geolocation"]
+}
