@@ -8,6 +8,7 @@ import PropertyDetails from './pages/PropertyDetails';
 import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
 import Admin from './pages/Admin';
+import Sell from './pages/Sell';
 
 interface AuthContextType {
   user: User | null;
@@ -60,6 +61,7 @@ export default function App() {
               <Route path="/search" element={<Search />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/sell" element={token ? <Sell /> : <Navigate to="/auth" />} />
               <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/auth" />} />
               <Route path="/admin" element={user?.role === 'admin' ? <Admin /> : <Navigate to="/" />} />
             </Routes>
@@ -78,7 +80,7 @@ export default function App() {
                   <h3 className="font-semibold mb-4">Quick Links</h3>
                   <ul className="space-y-2 text-neutral-500">
                     <li><a href="/search" className="hover:text-neutral-900">Search Properties</a></li>
-                    <li><a href="/auth" className="hover:text-neutral-900">List Property</a></li>
+                    <li><a href="/sell" className="hover:text-neutral-900">List Property</a></li>
                     <li><a href="/dashboard" className="hover:text-neutral-900">My Dashboard</a></li>
                   </ul>
                 </div>

@@ -110,7 +110,7 @@ export default function Home() {
               Join thousands of sellers who trust us to showcase their premium real estate to a global audience of qualified buyers.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/auth" className="bg-white text-neutral-900 px-8 py-4 rounded-2xl font-bold hover:bg-neutral-100 transition-all active:scale-95">
+              <Link to="/sell" className="bg-white text-neutral-900 px-8 py-4 rounded-2xl font-bold hover:bg-neutral-100 transition-all active:scale-95">
                 List Your Property
               </Link>
               <Link to="/search" className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all active:scale-95">

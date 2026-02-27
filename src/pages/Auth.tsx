@@ -34,7 +34,11 @@ export default function Auth() {
       if (data.error) throw new Error(data.error);
       
       login(data.user, data.token);
-      navigate('/dashboard');
+      if (data.user.role === 'seller') {
+        navigate('/sell');
+      } else {
+        navigate('/dashboard');
+      }
     } catch (err: any) {
       setError(err.message);
     } finally {

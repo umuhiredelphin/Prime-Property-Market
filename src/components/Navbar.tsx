@@ -35,7 +35,7 @@ export default function Navbar() {
                 )}
                 
                 {(user.role === 'seller' || user.role === 'admin') && (
-                  <Link to="/dashboard" className="flex items-center gap-1 text-neutral-600 hover:text-neutral-900 transition-colors">
+                  <Link to="/sell" className="flex items-center gap-1 text-neutral-600 hover:text-neutral-900 transition-colors">
                     <PlusCircle className="w-4 h-4" />
                     <span className="text-sm font-medium hidden sm:inline">List Property</span>
                   </Link>
