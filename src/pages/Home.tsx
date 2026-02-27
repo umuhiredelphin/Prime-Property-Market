@@ -14,7 +14,7 @@ export default function Home() {
     fetch('/api/properties?sort=newest')
       .then(res => res.json())
       .then(data => {
-        setFeaturedProperties(data.slice(0, 6));
+        setFeaturedProperties(Array.isArray(data) ? data.slice(0, 6) : []);
         setLoading(false);
       });
   }, []);

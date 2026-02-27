@@ -24,7 +24,7 @@ export default function Search() {
     fetch(`/api/properties?${params.toString()}`)
       .then(res => res.json())
       .then(data => {
-        setProperties(data);
+        setProperties(Array.isArray(data) ? data : []);
         setLoading(false);
       });
   }, [searchParams]);
