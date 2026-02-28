@@ -8,6 +8,11 @@ export interface User {
   id: number;
   name: string;
   email: string;
+  phone?: string;
+  id_number?: string;
+  id_image?: string;
+  selfie_image?: string;
+  is_verified: boolean;
   role: UserRole;
   status: UserStatus;
   created_at: string;
@@ -25,9 +30,27 @@ export interface Property {
   seller_id: number;
   seller_name?: string;
   seller_email?: string;
+  phone_contact: string;
   is_approved: number;
   is_featured: number;
   created_at: string;
+  
+  // House specific
+  bedrooms?: number;
+  bathrooms?: number;
+  parking?: number;
+  has_garden?: boolean;
+  floors?: number;
+  
+  // Land specific
+  land_size?: number;
+  zoning_type?: string;
+  has_road_access?: boolean;
+  
+  // Commercial specific
+  office_space?: number;
+  parking_capacity?: number;
+  business_type_allowed?: string;
 }
 
 export interface Payment {

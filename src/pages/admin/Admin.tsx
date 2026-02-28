@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useAuth } from '../App';
-import { Property, User, Payment, Report, Announcement } from '../types';
+import { useAuth } from '../../App';
+import { Property, User, Payment, Report, Announcement } from '../../types';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   CheckCircle2, XCircle, ShieldCheck, Users, Building2, 

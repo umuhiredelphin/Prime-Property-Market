@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../App';
-import { PROPERTY_TYPES } from '../constants';
+import { useAuth } from '../../App';
+import { PROPERTY_TYPES } from '../../constants';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Building2, Map, Warehouse, Landmark, Home as HomeIcon,
@@ -34,7 +34,7 @@ export default function Sell() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!token) return navigate('/auth');
+    if (!token) return navigate('/login');
     
     setLoading(true);
     try {
